@@ -1,0 +1,8 @@
+[PASS] Claim 1 - caching speeds fetching, not accuracy:
+        fetch 503.87ms -> 10.52ms (48x faster), accuracy 100.0% -> 100.0% (delta 0.0pp, within noise).
+[PARTIAL] Claim 2 - FAISS retrieval improves accuracy AND cuts tokens AND lowers latency:
+        accuracy 100.0% -> 97.9% (NOT up), tokens 19167 -> 701 (down), e2e latency 1.250s -> 0.926s (down); retrieval step adds only 59.1ms.
+[PASS] Claim 3 - crossover point sits around 20-40 tools:
+        measured crossover = 20
+        @10 tools: gw does not help (lat 0.915s -> 0.957s, acc 100% -> 100%)
+        @80 tools: gw clearly wins (lat 1.241s -> 0.901s, acc 100% -> 100%)

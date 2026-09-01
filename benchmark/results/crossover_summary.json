@@ -1,0 +1,50 @@
+{
+  "points": [
+    {
+      "tool_count": 10,
+      "no_gateway_accuracy": 1,
+      "no_gateway_latency_s": 0.9150957708043279,
+      "no_gateway_tokens": 1303.75,
+      "with_gateway_accuracy": 1,
+      "with_gateway_latency_s": 0.9565969270770438,
+      "with_gateway_tokens": 686.0625
+    },
+    {
+      "tool_count": 20,
+      "no_gateway_accuracy": 1,
+      "no_gateway_latency_s": 1.1332600859896047,
+      "no_gateway_tokens": 2518.25,
+      "with_gateway_accuracy": 1,
+      "with_gateway_latency_s": 0.9936327158793574,
+      "with_gateway_tokens": 696.3125
+    },
+    {
+      "tool_count": 40,
+      "no_gateway_accuracy": 1,
+      "no_gateway_latency_s": 1.081076309987111,
+      "no_gateway_tokens": 4971.5625,
+      "with_gateway_accuracy": 1,
+      "with_gateway_latency_s": 0.94589489052305,
+      "with_gateway_tokens": 695.25
+    },
+    {
+      "tool_count": 80,
+      "no_gateway_accuracy": 1,
+      "no_gateway_latency_s": 1.2408077760919696,
+      "no_gateway_tokens": 9776.625,
+      "with_gateway_accuracy": 1,
+      "with_gateway_latency_s": 0.9007515207777033,
+      "with_gateway_tokens": 685.0625
+    },
+    {
+      "tool_count": 150,
+      "no_gateway_accuracy": 1,
+      "no_gateway_latency_s": 1.3092243673017947,
+      "no_gateway_tokens": 18328.125,
+      "with_gateway_accuracy": 1,
+      "with_gateway_latency_s": 0.8660944397706771,
+      "with_gateway_tokens": 672
+    }
+  ],
+  "crossover_tool_count": 20
+}

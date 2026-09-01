@@ -1,0 +1,41 @@
+{
+  "A": {
+    "label": "All tools, no cache",
+    "n": 48,
+    "accuracy": 1,
+    "retrieval_recall": 1,
+    "avg_tools_shown": 157,
+    "avg_total_tokens": 19167.458333333332,
+    "avg_prompt_tokens": 19162.375,
+    "avg_fetch_ms": 503.8711883389624,
+    "avg_retrieval_ms": 0.0,
+    "avg_llm_latency_s": 1.215224710055433,
+    "avg_e2e_latency_s": 1.7190958983943954
+  },
+  "B": {
+    "label": "All tools, cached",
+    "n": 48,
+    "accuracy": 1,
+    "retrieval_recall": 1,
+    "avg_tools_shown": 157,
+    "avg_total_tokens": 19167.458333333332,
+    "avg_prompt_tokens": 19162.375,
+    "avg_fetch_ms": 10.524204757530242,
+    "avg_retrieval_ms": 0.0,
+    "avg_llm_latency_s": 1.2396433072669122,
+    "avg_e2e_latency_s": 1.2501675120244424
+  },
+  "C": {
+    "label": "Cached + FAISS retrieval (gateway)",
+    "n": 48,
+    "accuracy": 0.9791666666666666,
+    "retrieval_recall": 0.9791666666666666,
+    "avg_tools_shown": 5,
+    "avg_total_tokens": 700.9375,
+    "avg_prompt_tokens": 695.9791666666666,
+    "avg_fetch_ms": 10.511924410820939,
+    "avg_retrieval_ms": 59.052623260261804,
+    "avg_llm_latency_s": 0.8564722915180027,
+    "avg_e2e_latency_s": 0.9260368391890855
+  }
+}

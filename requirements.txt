@@ -1,0 +1,14 @@
+# mcp-gateway — Python 3.11+
+# Core retrieval / policy layer
+faiss-cpu>=1.8
+sentence-transformers>=3.0
+numpy>=1.25
+
+# LLM providers (swappable via config.LLM_PROVIDER)
+groq>=0.11
+google-generativeai>=0.8
+
+# Benchmark + charts
+matplotlib>=3.8
+
+# sqlite3 is in the Python standard library — no dependency needed.

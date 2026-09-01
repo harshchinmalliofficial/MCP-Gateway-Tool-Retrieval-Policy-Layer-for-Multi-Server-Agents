@@ -1,0 +1,29 @@
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+
+# --- python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- generated at runtime (kept out of the repo) ---
+data/audit.sqlite3
+data/desc_hashes.json
+data/real_tools_cache.json
+
+# --- os / editor ---
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# NOTE: benchmark/results/ (charts, CSVs, JSON summaries) IS committed on purpose
+# so the README renders with real numbers on GitHub.
