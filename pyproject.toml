@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-gateway"
+version = "0.1.0"
+description = "A retrieval-and-policy layer between an AI agent and many MCP (Model Context Protocol) servers."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "faiss-cpu>=1.8",
+    "sentence-transformers>=3.0",
+    "numpy>=1.25",
+    "groq>=0.11",
+    "google-generativeai>=0.8",
+    "matplotlib>=3.8",
+]
+
+[tool.setuptools]
+py-modules = ["config"]
+
+[tool.setuptools.packages.find]
+include = ["gateway", "gateway.*"]
