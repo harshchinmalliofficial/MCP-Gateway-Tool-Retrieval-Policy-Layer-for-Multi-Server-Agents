@@ -209,6 +209,31 @@ python tests/test_gateway.py                                # offline unit check
 
 If no key is present the runner prints exactly which env var to set and exits.
 
+## Using this as a library
+
+Install straight from GitHub — no PyPI publish, no local clone needed:
+
+```bash
+pip install git+https://github.com/harshchinmalliofficial/MCP-Gateway-Tool-Retrieval-Policy-Layer-for-Multi-Server-Agents.git
+```
+
+```python
+from gateway.proxy import build_default_proxy
+
+proxy = build_default_proxy(allow_network=False)  # skip live MCP server discovery
+print([t.name for t in proxy.prepare("reboot EC2 instance i-0abc123").tools])
+```
+
+`gateway/__init__.py` also re-exports `GatewayProxy`, `FaissRetriever` and
+`load_catalogue` (an alias for `gateway.tools.build_catalog`) for direct
+`from gateway import ...` access. Note that `config.py` resolves its data
+paths relative to its own file, so once installed as a dependency the
+`data/` and `benchmark/results/` folders it creates land inside your
+environment's `site-packages/`, not your project directory — fine for
+quick usage, but override `config.DATA_DIR` / `config.AUDIT_DB_PATH` (or
+set `MCP_GATEWAY_PROVIDER` / API keys via real env vars rather than a
+`.env` file) if you need those written somewhere else.
+
 ### Config knobs (all in `config.py`, env-overridable)
 
 | Value | Default | Meaning |
