@@ -20,6 +20,7 @@ import re
 import sqlite3
 import time
 from dataclasses import dataclass, field
+from pathlib import Path
 
 import config
 from gateway.tools import Tool
@@ -59,6 +60,7 @@ class Flag:
 
 class AuditLog:
     def __init__(self, path=config.AUDIT_DB_PATH):
+        config.ensure_dir(Path(path).parent)
         self._conn = sqlite3.connect(str(path))
         self._conn.execute(
             """
@@ -174,6 +176,7 @@ class PolicyEngine:
 
     def _flush(self) -> None:
         if self._hash_store is not None:
+            config.ensure_dir(self._hash_store.parent)
             self._hash_store.write_text(json.dumps(self._hashes, indent=2))
 
     # -- main entrypoint ------------------------------------------------------ #

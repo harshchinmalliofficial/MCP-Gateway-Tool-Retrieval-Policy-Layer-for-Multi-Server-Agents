@@ -218,6 +218,7 @@ def chart_crossover() -> Path:
 
 
 def build_all_charts() -> list[Path]:
+    config.ensure_dir(RESULTS_DIR)
     return [chart_setups(), chart_crossover()]
 
 

@@ -106,6 +106,7 @@ def load_real_tools(allow_network: bool = True, timeout: float = 90.0) -> list[T
             except Exception as exc:  # noqa: BLE001 - best effort by design
                 print(f"  [real MCP] {spec.key}: unavailable ({type(exc).__name__}: {exc})")
         if collected:
+            config.ensure_dir(_REAL_CACHE.parent)
             _REAL_CACHE.write_text(
                 json.dumps([t.to_dict() for t in collected], indent=2)
             )

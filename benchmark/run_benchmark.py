@@ -254,12 +254,14 @@ def find_crossover_point(summary: list[dict]) -> int | None:
 
 
 def write_json(name: str, obj) -> Path:
+    config.ensure_dir(RESULTS_DIR)
     p = RESULTS_DIR / name
     p.write_text(json.dumps(obj, indent=2, default=str))
     return p
 
 
 def write_csv(name: str, rows: list[dict]) -> Path:
+    config.ensure_dir(RESULTS_DIR)
     p = RESULTS_DIR / name
     if not rows:
         p.write_text("")
@@ -481,6 +483,7 @@ def main() -> int:
     verdict_lines = verdicts(main_summary, xover_summary, xpoint, is_sim)
     for line in verdict_lines:
         print(line)
+    config.ensure_dir(RESULTS_DIR)
     (RESULTS_DIR / "verdicts.txt").write_text("\n".join(verdict_lines))
 
     # -- README ----------------------------------------------------------- #

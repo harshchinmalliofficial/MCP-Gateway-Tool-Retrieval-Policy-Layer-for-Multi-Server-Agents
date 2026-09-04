@@ -13,13 +13,24 @@ from pathlib import Path
 # --------------------------------------------------------------------------- #
 # Paths
 # --------------------------------------------------------------------------- #
-ROOT = Path(__file__).resolve().parent
+# Where this package reads its .env and writes runtime state (SQLite audit
+# log, tool cache, description-hash store). Defaults to the current working
+# directory - NOT Path(__file__)'s location - so that installing mcp-gateway
+# as a dependency elsewhere reads/writes your project's own files instead of
+# reaching into site-packages where the package itself happens to live.
+# Override with MCP_GATEWAY_DATA_DIR if you want that state pinned somewhere
+# else regardless of cwd.
+ROOT = Path(os.environ.get("MCP_GATEWAY_DATA_DIR", Path.cwd()))
 DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "benchmark" / "results"
 AUDIT_DB_PATH = DATA_DIR / "audit.sqlite3"
 
-DATA_DIR.mkdir(exist_ok=True)
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+def ensure_dir(path: Path) -> Path:
+    """Create ``path`` (and parents) on demand. Call this right before an
+    actual write - importing this module must never touch the filesystem."""
+    path.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 # --------------------------------------------------------------------------- #
