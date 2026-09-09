@@ -10,8 +10,11 @@ tools per query, wraps a policy plane around it (allow/deny, tool-poisoning
 detection, prompt-injection scanning, SQLite audit), and ships a benchmark that
 measures — with real numbers — whether it was worth it.
 
+This project is licensed for personal, educational, and evaluation use.
+Commercial use requires permission — see [LICENSE](LICENSE).
+
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)
-![License: MIT](https://img.shields.io/badge/license-MIT-green)
+![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-green)
 ![FAISS](https://img.shields.io/badge/retrieval-FAISS%20%2B%20MiniLM-e63946)
 ![provider](https://img.shields.io/badge/LLM-Groq%20%E2%96%B8%20Gemini%20%E2%96%B8%20offline-457b9d)
 

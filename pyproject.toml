@@ -7,7 +7,7 @@ name = "mcp-gateway"
 version = "0.1.0"
 description = "A retrieval-and-policy layer between an AI agent and many MCP (Model Context Protocol) servers."
 readme = "README.md"
-license = { text = "MIT" }
+license = { text = "PolyForm Noncommercial License 1.0.0" }
 requires-python = ">=3.10"
 dependencies = [
     "faiss-cpu>=1.8",
