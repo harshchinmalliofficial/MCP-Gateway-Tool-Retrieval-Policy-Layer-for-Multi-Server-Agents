@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """Semantic (hybrid) tool retrieval with FAISS.
 
 At startup we embed every tool's ``name + description`` into a FAISS index.

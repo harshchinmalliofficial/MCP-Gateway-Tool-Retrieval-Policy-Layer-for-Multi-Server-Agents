@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """Policy plane: allow/deny, tamper detection, prompt-injection scanning, audit.
 
 Responsibilities

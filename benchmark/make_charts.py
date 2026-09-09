@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """Render the two benchmark charts as PNGs into benchmark/results/.
 
 Chart 1 - setups_accuracy_tokens.png : A/B/C, accuracy and tokens (two panels,

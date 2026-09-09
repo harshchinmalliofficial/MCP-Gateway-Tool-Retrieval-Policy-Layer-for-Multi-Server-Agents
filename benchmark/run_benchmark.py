@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """End-to-end benchmark for mcp-gateway.
 
 Runs every test query under three setups and records tool-selection accuracy,

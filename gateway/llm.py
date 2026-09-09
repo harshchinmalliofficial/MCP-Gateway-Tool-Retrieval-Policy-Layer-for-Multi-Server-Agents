@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """Swappable LLM provider for the *tool-selection* step.
 
 Given a user query and a list of candidate tool schemas, the provider must

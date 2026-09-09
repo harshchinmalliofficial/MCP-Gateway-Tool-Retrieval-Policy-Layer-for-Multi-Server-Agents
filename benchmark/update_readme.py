@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """Render README.md from README.template.md + the last benchmark run's numbers.
 
 The template holds ``{{PLACEHOLDER}}`` tokens; this script fills them from

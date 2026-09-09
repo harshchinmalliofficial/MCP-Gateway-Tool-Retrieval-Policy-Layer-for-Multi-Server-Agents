@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """mcp-gateway: a retrieval-and-policy layer between an AI agent and many MCP servers."""
 
 from gateway.proxy import GatewayProxy

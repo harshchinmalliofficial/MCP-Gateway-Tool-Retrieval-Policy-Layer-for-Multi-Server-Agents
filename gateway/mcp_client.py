@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """A tiny, dependency-free MCP stdio client.
 
 Just enough of the Model Context Protocol to launch a server process, perform

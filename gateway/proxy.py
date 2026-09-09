@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """The gateway proxy: cache + retriever + policy, wired together.
 
 ``GatewayProxy.prepare(query)`` is the whole value proposition in one call:

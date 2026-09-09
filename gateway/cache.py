@@ -1,3 +1,6 @@
+# Copyright (c) 2026 Harsh Chinmalli
+# Licensed under PolyForm Noncommercial 1.0.0 — see LICENSE file.
+
 """In-memory TTL cache for fetched tool definitions.
 
 The gateway fetches tool schemas from (possibly slow, possibly remote) MCP
